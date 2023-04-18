@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FileGuard</string>
+    <string name="decrypt">Decrypt</string>
+    <string name="enter_filename_for_encryption">Enter filename for encryption</string>
+    <string name="decrypt_section">Decrypt Section</string>
+    <string name="enter_filename_for_decryption">Enter filename for decryption</string>
+    <string name="encrypt">Encrypt</string>
+    <string name="encrypt_section">Encrypt Section</string>
+    <string name="digest">Digest</string>
+    <string name="verify">Verify</string>
+    <string name="Decrypt">Decrypt</string>
+    <string name="view">View</string>
+    <string name="view1">View</string>
+</resources>

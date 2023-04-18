@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CDDC39"
+        android:text="@string/encrypt_section"
+        android:textColor="#1B5E20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <EditText
+        android:id="@+id/txtEncFileName"
+        android:layout_width="252dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_filename_for_encryption"
+        android:inputType="textPersonName"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label1" />
+
+    <Button
+        android:id="@+id/buttonEncrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/encrypt"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDigest"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEncFileName" />
+
+    <TextView
+        android:id="@+id/encryptedData"
+        android:layout_width="308dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEncrypt" />
+
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="#CDDC39"
+        android:text="@string/decrypt_section"
+        android:textColor="#1B5E20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encryptedData" />
+
+    <EditText
+        android:id="@+id/txtDecFileName"
+        android:layout_width="252dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="22dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_filename_for_decryption"
+        android:inputType="textPersonName"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label2" />
+
+    <TextView
+        android:id="@+id/txtDec"
+        android:layout_width="292dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/label2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encryptedData" />
+
+    <Button
+        android:id="@+id/buttonDigest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="17dp"
+        android:text="@string/digest"
+        app:layout_constraintBottom_toTopOf="@+id/encryptedData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEncFileName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttonVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:text="@string/verify"
+        app:layout_constraintBottom_toTopOf="@+id/txtDec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDecFileName"
+        app:layout_constraintVertical_bias="0.655" />
+
+    <Button
+        android:id="@+id/buttonDecrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Decrypt"
+        app:layout_constraintBottom_toTopOf="@+id/txtDec"
+        app:layout_constraintEnd_toStartOf="@+id/buttonVerify"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDecFileName"
+        app:layout_constraintVertical_bias="0.735" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="60dp"
+        android:text="@string/view"
+        app:layout_constraintBottom_toTopOf="@+id/encryptedData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEncFileName" />
+
+    <Button
+        android:id="@+id/btnView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="83dp"
+        android:text="@string/view1"
+        app:layout_constraintBottom_toTopOf="@+id/txtDec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDecFileName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
